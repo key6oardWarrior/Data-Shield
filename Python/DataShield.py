@@ -41,7 +41,7 @@ class DataShield:
 		responce = input("If you want to encrypt a file type Y? If you want to input data to be encrypted type N. If you want to decrypt data type NN. Y/N/NN ").upper().strip()
 
 		while((responce != "Y") and (responce != "N") and (responce != "NN")):
-			print("\nResponce must be either Y/N")
+			print("\nResponce must be either Y/N/NN")
 			responce = input("If you want to encrypt a file type Y? If you want to input data to be encrypted type N. If you want to decrypt data type NN. Y/N/NN ").upper().strip()
 
 		if responce == "Y": # encrypt existing file
