@@ -8,19 +8,19 @@ class DataShield:
 	def __init__(self):
 		pass
 
-	def __responceHandler(self, queary):
+	def __responceHandler(self, query):
 		'''
 		Handle yes and no responces
 
-		@param <class 'str'> queary to the user\n
+		@param <class 'str'> query to the user\n
 		@return <class 'str'> user's responce
 		'''
-		responce = input(queary).upper().strip()
+		responce = input(query).upper().strip()
 
 		while((responce != "Y") and (responce != "N")):
 			print("\nResponce must be either Y/N")
-			responce = input(queary).upper().strip()
-		
+			responce = input(query).upper().strip()
+
 		return responce
 
 	def __fileHandler(self):
@@ -34,7 +34,7 @@ class DataShield:
 		while(os.path.exists(filePath) == False):
 			print(f"\nFile {filePath} does not exists")
 			filePath = input("Enter file path: ")
-		
+
 		return filePath
 
 	def main(self):
