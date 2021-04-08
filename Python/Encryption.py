@@ -80,8 +80,7 @@ if __name__ == "__main__":
 	if testInput == "0":
 		enc = EncryptInput("test")
 		enc.encAlg(outName=enc.encData())
+		os.remove(os.path.join(os.path.dirname(__file__), "data.txt"))
 	else:
 		enc = EncryptFile()
 		enc.encAlg(input("File name "), enc.encFile())
-
-	os.remove(os.path.join(os.path.dirname(__file__), "data.txt"))
