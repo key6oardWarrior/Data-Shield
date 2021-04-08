@@ -50,7 +50,6 @@ class EncryptInput(Encryption):
 		@param <class 'str'> output name of file
 		@param <class 'str'> input name of file
 		'''
-
 		os.system(f"openssl enc -aes-256-cbc -in {os.path.join(self.__PATH, inName)} -out {outName}.bin")
 
 	def encData(self):
