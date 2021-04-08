@@ -6,7 +6,7 @@
 
 <div id="intro">
 	<h2>Purpose</h2>
-	<p>This project is designed to help people keep their personal data secure on their personal computers. If a user has a social security number, picture of driver's license, or client's data stored on their computer(s) then the user's computer become a liability! To protect this data a user must use a strong encryption algorithm along with a strong password to keep this data safe. Data Shield is a user friendly approach to encrypting and decrypting sensitive data on a person's Linux or Windows computer. Please read <a href="#how2">How to Use</a>.</p>
+	<p>This project is designed to help people keep their personal data secure on their personal computers. If a user has a social security number, picture of driver's license, or client's data stored on their computer(s) then the user's computer become a liability! To protect this data a user must use a strong encryption algorithm along with a strong password to keep this data safe. Data Shield is a user friendly approach to encrypting and decrypting sensitive data on a person's Linux or Windows computer. Please read <a href="#how2">How to Use</a> and <a href="#upComing">Up Coming Features</a>.</p>
 </div>
 
 <div id="how2">
@@ -21,6 +21,13 @@
 </div>
 
 <p><a href="#intro">Purpose</a></p>
+
+<div id="upComing">
+	<h2>Up Coming Features</h2>
+	<ol>
+		<li>A user friendly UI instead of Command Line Interface (CLI)</li>
+	</ol>
+</div>
 
  </body>
 </html>
