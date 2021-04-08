@@ -25,7 +25,7 @@
 <div id="upComing">
 	<h2>Up Coming Features</h2>
 	<ol>
-		<li>A user friendly UI instead of Command Line Interface (CLI)</li>
+		<li>A user friendly User Interface (UI) instead of Command Line Interface (CLI)</li>
 	</ol>
 </div>
 
