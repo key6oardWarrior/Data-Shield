@@ -5,9 +5,9 @@ class Decryption:
 		pass
 
 	def decrypt(self, fileName, outName):
-		os.system(f"openssl enc -aes-256-cbc -d -in {fileName} -out {outName}")
+		os.system(f"openssl enc -aes-256-cbc -d -in {fileName}.bin -out {outName}")
 		print("Decrypted data:\n", open(f"{outName}", "r").read())
 
 if __name__ == "__main__":
 	test = Decryption()
-	test.decrypt("tester.bin", "tester")
+	test.decrypt("tester", "test.txt")

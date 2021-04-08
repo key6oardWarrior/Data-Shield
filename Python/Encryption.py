@@ -38,6 +38,8 @@ class EncryptFile(Encryption):
 		return newFileName
 
 class EncryptInput(Encryption):
+	__PATH = os.path.dirname(__file__)
+
 	def __init__(self, data):
 		self.__DATA = data
 
@@ -48,7 +50,8 @@ class EncryptInput(Encryption):
 		@param <class 'str'> output name of file
 		@param <class 'str'> input name of file
 		'''
-		os.system(f"openssl enc -aes-256-cbc -in {inName} -out {outName}.bin")
+
+		os.system(f"openssl enc -aes-256-cbc -in {os.path.join(self.__PATH, inName)} -out {outName}.bin")
 
 	def encData(self):
 		'''
@@ -56,10 +59,9 @@ class EncryptInput(Encryption):
 
 		@return <class 'str'>
 		'''
-		PATH = os.path.dirname(__file__)
 		newFileName = input("Enter encrypted file's name: ")
 
-		open(os.path.join(PATH, "data.txt"), "w").write(self.__DATA)
+		open(f"{self.__PATH}\\data.txt", "w").write(self.__DATA)
 		while os.path.exists(f"{newFileName}.bin"):
 			responce = input(f"Are you sure you want to overwrite {newFileName}? Y/N ").upper().strip()
 
@@ -77,9 +79,9 @@ if __name__ == "__main__":
 
 	if testInput == "0":
 		enc = EncryptInput("test")
-		enc.encAlg(enc.encData())
+		enc.encAlg(outName=enc.encData())
 	else:
 		enc = EncryptFile()
 		enc.encAlg(input("File name "), enc.encFile())
 
-	os.remove("data.txt")
+	os.remove(os.path.join(os.path.dirname(__file__), "data.txt"))

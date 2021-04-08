@@ -49,7 +49,8 @@ class DataShield:
 			data = input("Enter data to be encryped: ")
 			encData = EncryptInput(data)
 			encData.encAlg(outName=encData.encData())
-			os.remove("data.txt")
+
+			os.remove(os.path.join(os.path.dirname(__file__), "data.txt"))
 
 try:
 	if python_version()[0] != "3":
