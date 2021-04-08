@@ -20,14 +20,15 @@
 		</ol>
 </div>
 
-<p><a href="#intro">Purpose</a></p>
-
 <div id="upComing">
 	<h2>Up Coming Features</h2>
 	<ol>
 		<li>A user friendly User Interface (UI) instead of Command Line Interface (CLI)</li>
 	</ol>
 </div>
+
+<p><a href="#intro">Purpose</a></p>
+<a href="#how2">How to Use</a>
 
  </body>
 </html>
