@@ -5,6 +5,8 @@ from Encryption import EncryptFile, EncryptInput
 from Decryption import Decryption
 
 class DataShield:
+	__PATH = os.path.dirname(__file__)
+
 	def __init__(self):
 		pass
 
@@ -53,7 +55,7 @@ class DataShield:
 			responce = self.__responceHandler("Do you want to delete the unencrypted file? Y/N (Y is recommended) ")
 			
 			if responce == "Y":
-				os.remove(os.path.join(os.path.dirname(__file__), filePath))
+				os.remove(os.path.join(self.__PATH, filePath))
 
 		elif responce == "NN": # decrypt an encrypted file
 			filePath = self.__fileHandler()
@@ -68,18 +70,22 @@ class DataShield:
 			decrypt = Decryption()
 			decrypt.decrypt(filePath, outName)
 
+			responce = self.__responceHandler("Do you want to delete the encrypted file Y/N ")
+			if responce == "Y":
+				os.remove(filePath)
+
 		else: # encrypt user input
 			data = input("Enter data to be encryped: ")
 			encData = EncryptInput(data)
 			encData.encAlg(outName=encData.encData())
 
-			os.remove(os.path.join(os.path.dirname(__file__), "data.txt"))
+			os.remove(os.path.join(self.__PATH, "data.txt"))
 
 try:
-	if python_version()[0] != "3":
-		raise RuntimeError("Python version must be 3.X.X")
+	if int(python_version()[0]) >= 3:
+		raise RuntimeError("Python version must be 3.X.X, or greater")
 except:
-	raise RuntimeError("Python version must be 3.X.X")
+	raise RuntimeError("Python version must be 3.X.X, or greater")
 
 dataShield = DataShield()
 dataShield.main()
