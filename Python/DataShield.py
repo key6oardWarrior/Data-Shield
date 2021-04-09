@@ -82,7 +82,7 @@ class DataShield:
 			os.remove(os.path.join(self.__PATH, "data.txt"))
 
 try:
-	if int(python_version()) >= 3.0:
+	if int(python_version()) < 3.0:
 		raise RuntimeError("Python version must be 3.X.X, or greater")
 except:
 	raise RuntimeError("Python version must be 3.X.X, or greater")
