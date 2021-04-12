@@ -47,7 +47,7 @@ class EncryptInput(Encryption):
 		'''
 		Use the AES algorithm to encrypt a file using a 256 bit Cypher block chaining algorthm
 
-		@param <class 'str'> output name of file
+		@param <class 'str'> output name of file\n
 		@param <class 'str'> input name of file
 		'''
 		os.system(f"openssl enc -aes-256-cbc -in {os.path.join(self.__PATH, inName)} -out {outName}.bin")
