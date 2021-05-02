@@ -14,7 +14,7 @@
 		<ol>
 			<li>On Windows open the terminal and type: <code>py [file location]/DataShield.py</code>
 			<li>On Linux open the terminal and type: <code>python3 [file location]/DataShield.py</code>
-			<li>User is asked a do they want to encrypt or decrypt data</li>
+			<li>The user is asked if they want to encrypt or decrypt data</li>
 			<li>User enters either file, or data to be encrypted, or decrypted</li>
 			<li>The program will either encrypt, or decrypt the requested data</li>
 		</ol>
